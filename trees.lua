@@ -439,5 +439,7 @@ function aus.generate_conifer_schematic(trunk_height, radius, trunk, leaf, fruit
 	return s
 end
 
+dofile(aus.path.."/trees/big_giant_tree_fern.lua")
 dofile(aus.path.."/trees/mangrove_palm.lua")
+dofile(aus.path.."/trees/small_tree_fern.lua")
 dofile(aus.path.."/trees/waratah.lua")

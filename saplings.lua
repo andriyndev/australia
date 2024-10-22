@@ -40,6 +40,8 @@ aus.saplings = {
 	["australia:river_oak_sapling"] = {schematics=aus.schematics.river_oak_tree},
 	["australia:river_red_gum_sapling"] = {schematics=aus.schematics.river_red_gum_tree},
 	["australia:rottnest_island_pine_sapling"] = {schematics=aus.schematics.rottnest_island_pine_tree},
+	["australia:sapling_giant_tree_fern"] = {schematics=aus.schematics.big_giant_tree_fern},
+	["australia:sapling_tree_fern"] = {schematics=aus.schematics.small_tree_fern},
 	["australia:scribbly_gum_sapling"] = {schematics=aus.schematics.scribbly_gum_tree},
 	["australia:shoestring_acacia_sapling"] = {schematics=aus.schematics.shoestring_acacia_tree},
 	["australia:snow_gum_sapling"] = {schematics=aus.schematics.snow_gum_tree},
@@ -70,11 +72,12 @@ local function grow_sapling(pos, node_name)
 
 	minetest.log("action", "A sapling grows into a tree at " .. minetest.pos_to_string(pos))
 
+	minetest.remove_node(pos)
 	local schem = sap_data.schematics[math.random(1, #sap_data.schematics)]
 	local adj = {x = pos.x - math.floor(schem.size.x / 2),
 					y = pos.y - 1,
 					z = pos.z - math.floor(schem.size.z / 2)}
-	minetest.place_schematic(adj, schem, 'random', nil, true)
+	minetest.place_schematic(adj, schem, 'random', nil, false)
 end
 
 -- create a list of just the node names

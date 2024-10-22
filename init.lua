@@ -17,7 +17,7 @@ end
 
 -- Definitions made by this mod that other mods can use too
 aus = {}
-aus.path = minetest.get_modpath("australia")
+aus.path = minetest.get_modpath(minetest.get_current_modname())
 aus.schematics = {}
 
 -- Set the following to 1 to enable biome or 0 to disable
