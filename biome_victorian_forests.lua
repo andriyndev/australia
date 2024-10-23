@@ -98,86 +98,34 @@ minetest.register_ore({
 -- Ferns
 --
 
-	-- Big Tree Fern
-local n1 = { name = "air", prob = 0 }
-local n2 = { name = "australia:tree_fern_leaf_big_end" }
-local n3 = { name = "australia:tree_fern_leaf_big" }
-local n4 = { name = "australia:fern_trunk_big" }
-local n5 = { name = "australia:tree_fern_leaf_big_end", param2 = 1 }
-local n6 = { name = "australia:fern_trunk_big_top" }
-local n7 = { name = "australia:tree_fern_leaf_big_end", param2 = 3 }
-local n8 = { name = "australia:tree_fern_leaves_giant" }
-local n9 = { name = "australia:tree_fern_leaf_big_end", param2 = 2 }
-minetest.register_decoration({
-	deco_type = "schematic",
-	sidelen = 80,
-	place_on = {"default:dirt_with_grass"},
-	y_min = 36,
-	y_max = 70,
-	fill_ratio = 0.004,
-	biomes = {"victorian_forests"},
-	schematic = {
-		size = {y = 7, x = 9, z = 9},
-	data = {
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n2, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n3, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n3, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n3, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n4, n1, n1, n1, n1, n1, n1, n1, n1, n4, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n4, n1, n1, n1, n1, n1, n1, n1, n1, n4, n1, n1, n1, n1, n5, 
-			n1, n1, n1, n6, n1, n1, n1, n7, n1, n3, n1, n3, n8, n3, n1, n3, n1, 
-			n1, n1, n3, n1, n1, n1, n3, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n3, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n3, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n3, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n9, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, n1, 
-			n1, n1, n1, n1, n1, n1, 
-			},
-		yslice_prob = {},
-	},
-	flags = "place_center_x, place_center_z",
-})
+-- Big Tree Fern
+for _, schem in ipairs(aus.schematics.big_tree_fern) do
+	minetest.register_decoration({
+		deco_type = "schematic",
+		sidelen = 80,
+		place_on = {"default:dirt_with_grass"},
+		y_min = 36,
+		y_max = 70,
+		fill_ratio = 0.004,
+		biomes = {"victorian_forests"},
+		schematic = schem,
+		flags = "place_center_x, place_center_z",
+	})
+end
 
-	-- Small Tree Fern
-local f1 = { name = "australia:fern_trunk" }
-local f2 = { name = "australia:tree_fern_leaves_02" }
-minetest.register_decoration({
-	deco_type = "schematic",
-	sidelen = 80,
-	place_on = {"default:dirt_with_grass"},
-	y_min = 36,
-	y_max = 80,
-	fill_ratio = 0.008,
-	biomes = {"victorian_forests"},
-	schematic = {
-		size = {y = 4, x = 1, z = 1},
-	data = {
-			f1, f1, f1, f2, 
-			},
-		yslice_prob = {},
-	},
-})
+-- Small Tree Fern
+for _, schem in ipairs(aus.schematics.small_tree_fern) do
+	minetest.register_decoration({
+		deco_type = "schematic",
+		sidelen = 80,
+		place_on = {"default:dirt_with_grass"},
+		y_min = 36,
+		y_max = 80,
+		fill_ratio = 0.008,
+		biomes = {"victorian_forests"},
+		schematic = schem,
+	})
+end
 
 	-- Ruddy Ground Fern
 minetest.register_decoration({
